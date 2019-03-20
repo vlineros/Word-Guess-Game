@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <title>Doctor Word Guess Game</title>
+  </head>
+  <body>
+    <div class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <h1>Doctor Word Guess Game</h1>
+      </div>
+    </div>
+    <div class="container-flex">
+      <div class="container">
+        <h3>Press any key to begin!</h3>
+        <p id="patient-counter">Patients saved today:</p>
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              class="img-fluid"
+              src="assets/images/Doc-Patient-01.jpg"
+              alternate="A doctor looking at a patients chart"
+            />
+          </div>
+          <div class="col-md-6">
+            <iframe
+              src="https://giphy.com/embed/YeyTwwZLmAIvK"
+              width="45%"
+              height="45%"
+              frameBorder="0"
+              id="heart-beat"
+            ></iframe>
+            <p>
+              <a
+                id="link-text"
+                href="https://giphy.com/gifs/heart-YeyTwwZLmAIvK"
+                >via GIPHY</a
+              >
+            </p>
+            <p>
+              Ahh yes, this here is a classic case of uh.. it's.. uhhh... darn..
+              what is that disease called again?
+            </p>
+          <ul>
+          <li id="hint-space">bleh</li>
+          <li id="word-space">bleh</li>
+          <li id="guess-space">bleh</li>
+          <li id="counter-space">bleh</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="assets/javascript/game.js"></script>
+  </body>
+</html>
