@@ -1,11 +1,44 @@
-/* 
-    change font / size / color of h1 
-    make link-text small
-    Maybe make EKG look like attached to image
-    Maybe Give container height of some percentage
-    give container top margin
-    ul style display = none (get rid of asterisks)
-    Make hint-space small
-    make word space big
-    
-*/
+#reset-button {
+  visibility: hidden;
+}
+#hint-space {
+  visibility: hidden;
+}
+.navbar {
+  background-color: #63bd9a;
+}
+h1 {
+  font-family: "Fredoka One", cursive;
+  color: #ffffff;
+}
+#link-text {
+  font-size: 10px;
+}
+#heart-gif {
+  padding: 15px;
+  background-color: #dee0e0;
+}
+h3 {
+  margin-top: 20px;
+  font-family: "Quattrocento Sans", sans-serif;
+}
+li {
+  list-style-type: none;
+  font-family: "Quattrocento Sans", sans-serif;
+}
+#word-space {
+  font-size: 2em;
+}
+h3,
+p,
+span {
+  font-family: "Quattrocento Sans", sans-serif;
+}
+#reset-button {
+  padding: 10px;
+  background-color: #63bd9a;
+  border-radius: 20px;
+  border: none;
+  color: #ffffff;
+  font-family: "Quattrocento Sans", sans-serif;
+}

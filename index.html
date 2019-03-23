@@ -11,10 +11,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
     <title>Doctor Word Guess Game</title>
   </head>
   <body>
-    <div class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="navbar navbar-expand-lg">
       <div class="container">
         <h1>Doctor Word Guess Game</h1>
       </div>
@@ -24,7 +25,7 @@
         <h3>Press any key to begin!</h3>
         <p id="patient-counter">Patients saved today:</p>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 right-column">
             <img
               class="img-fluid"
               src="assets/images/Doc-Patient-01.jpg"
@@ -32,7 +33,7 @@
             />
           </div>
           <div class="col-md-6">
-            <iframe
+            <iframe id="heart-gif"
               src="https://giphy.com/embed/YeyTwwZLmAIvK"
               width="45%"
               height="45%"
@@ -46,19 +47,23 @@
                 >via GIPHY</a
               >
             </p>
-            <p>
+            <p id="main-text">
               Ahh yes, this here is a classic case of uh.. it's.. uhhh... darn..
               what is that disease called again?
             </p>
           <ul>
-          <li id="hint-space">bleh</li>
-          <li id="word-space">bleh</li>
-          <li id="guess-space">bleh</li>
-          <li id="counter-space">bleh</li>
+          <li id="word-space"></li>
+          <li id="hint-space"></li>
+          <li id="guess-space"></li>
+          <li id="counter-space"></li>
           </ul>
         </div>
       </div>
+       <button type="button"  id="reset-button" class="btn-primary" onclick="resetGame();">Next Patient!</button>
     </div>
+    <audio id="myAudio">
+      <source src = "assets/Flatline tone.wav">
+    </audio>
     <script src="assets/javascript/game.js"></script>
   </body>
 </html>
