@@ -1,21 +1,32 @@
 // HIDE H3 WHEN GAME STARTS
 // look into making code an object
 // if making this an object need to fix word global variable
+// make an image changer in resetGame() that adds a random number to the image src=
 
 var mainText = document.getElementById("main-text");
 var hintSpace = document.getElementById("hint-space");
 var wordSpace = document.getElementById("word-space");
 var guessSpace = document.getElementById("guess-space");
 var counterSpace = document.getElementById("counter-space");
-var patientImg = document.getElementsByClassName("img-fluid"); //<- this may not work lol
 var patientCounter = document.getElementById("patient-counter");
 var resetButton = document.getElementById("reset-button");
-var wordList = ["pneumonia", "flu", "cholera", "gangrene"];
+var wordList = [
+  "pneumonia",
+  "flu",
+  "cholera",
+  "gangrene",
+  "malaria",
+  "rabies",
+  "meningitis"
+];
 var hintList = [
   "Showing signs of fluid in the lungs...",
   "It seems like a common cold but nastier...",
   "They must have had some bad water...",
-  "looks like a lot of dead tissue..."
+  "looks like a lot of dead tissue...",
+  "They seem to have gotten it from a mosquito bite...",
+  "It looks like a wild animal bite caused this...",
+  "Looks like some bad swelling in the brain..."
 ];
 var guessedRight = 0;
 var winCount = 0;
@@ -135,7 +146,20 @@ function resetGame() {
   resetButton.style.visibility = "hidden";
   document
     .getElementById("heart-gif")
-    .setAttribute("src", "https://giphy.com/embed/YeyTwwZLmAIvK");
+    .setAttribute(
+      "src",
+      "https://voicesofglass.files.wordpress.com/2015/02/heart-monitor-o.gif?w=529"
+    );
+  var images = [
+    "assets/images/Doc-Patient-01.jpg",
+    "assets/images/Doc-Patient-02.jpg",
+    "assets/images/Doc-Patient-03.jpg",
+    "assets/images/Doc-Patient-04.jpg",
+    "assets/images/Doc-Patient-05.jpg"
+  ];
+  var t = Math.floor(Math.random() * images.length);
+  console.log(images[t]);
+  document.getElementById("patient-image").setAttribute("src", images[t]);
 }
 wordGenerator();
 document.onkeyup = function(event) {
