@@ -88,9 +88,10 @@ function checkLetter(word, keyHit) {
       var multKeys = [];
       for (z = 0; z < word.length; z++) {
         if (word[z] === keyHit) {
-          var keyIndex = word.indexOf(keyHit);
+          // var keyIndex = word.indexOf(keyHit);
           multKeys.push(z);
           guessedRight++;
+          letterGuesses.push(keyHit);
           for (q = 0; q < multKeys.length; q++) {
             document.getElementById("space" + multKeys[q]).textContent =
               word[multKeys[q]];
